@@ -1,14 +1,8 @@
 {
-  "name": "plum",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "cypress": "cypress open"
+    "cypress:run": "cypress run"
   },
-  "author": "Aakash Satpute",
-  "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "cypress": "^13.6.4"
   }
 }
