@@ -16,6 +16,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Cache Cypress binary
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache/Cypress
+          key: cypress-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            cypress-${{ runner.os }}-
+
       - name: Install Cypress
         run: npm install cypress
 
